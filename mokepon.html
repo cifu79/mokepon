@@ -11,8 +11,15 @@
     <section id="seleccionar-mascota">
         <h2>Elige a tu mascota:</h2>
 
-        mascotas
-        <button>seleccionar</button>
+        <label for="hipodoge">Hipodoge</label>
+        <input type="radio" name="macota" id="hipodoge">
+        <label for="capipepo">Capipepo</label>
+        <input type="radio" name="macota" id="capipepo">
+        <label for="ratigueya">Ratigueya</label>
+        <input type="radio" name="macota" id="ratigueya">
+
+
+        <button id="boton-mascota">seleccionar</button>
     </section>
 
     <section id="seleccionar-ataque">
@@ -20,9 +27,9 @@
         <p>Tu mascota tine <span>3</span> vidas</p>
         <p>La mascota del enemigo tiene <span>3</span> vidas</p>
         <p>
-            <button>Fuego</button>
-            <button>Agua</button>
-            <button>Tierra</button>
+            <button id="boton-fuego">Fuego</button>
+            <button id="boton-agua">Agua</button>
+            <button id="boton-tierra">Tierra</button>
          </p>
     </section>
 
@@ -31,7 +38,8 @@
     </section>
 
     <section id="reiniciar">
-        Reiniciar
+        <button id="boton-reiniciar">Reiniciar</button>
     </section>
+<script src="./mokepon.js"></script>
 </body>
 </html>
