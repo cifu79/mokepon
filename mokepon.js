@@ -1,5 +1,7 @@
 let resultadoJugador
 let resultadoEnemigo
+let VidasJugador = 3
+let vidasEnemigo = 3
 
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById('boton-mascota')
@@ -84,16 +86,27 @@ function resultadoAleatorioEnemigo(){
 }
 
 function combate(){
+    let spanVidasJugador = document.getElementById('vidas-jugador')
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+
     if(resultadoEnemigo == resultadoJugador){
         crearMensaje("empate")
     }else if(resultadoJugador == "fuego" && resultadoEnemigo == "tierra"){
         crearMensaje("ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerText = vidasEnemigo
     }else if(resultadoJugador == "agua" && resultadoEnemigo == "fuego"){
         crearMensaje("ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerText = vidasEnemigo
     }else if(resultadoJugador == "tierra" && resultadoEnemigo == "agua"){
         crearMensaje("ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerText = vidasEnemigo
     }else{
         crearMensaje("perdiste")
+        VidasJugador -= 1
+        spanVidasJugador.innerText = VidasJugador
     }
 }
 
